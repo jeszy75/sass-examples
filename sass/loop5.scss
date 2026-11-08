@@ -1,0 +1,9 @@
+%group {
+  width: 50%;
+}
+
+@each $i in a, b, c, d, e {
+  div.group-#{$i} {
+    @extend %group;
+  }
+}

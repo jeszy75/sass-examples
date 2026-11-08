@@ -1,0 +1,11 @@
+@use "sass:list";
+
+$colors: lightcyan, lightblue, skyblue;
+
+$color-count: list.length($colors);
+
+@for $i from 1 through $color-count {
+    tr:nth-child(#{$color-count}n + #{$i}) {
+        background-color: list.nth($colors, $i);
+    }
+}

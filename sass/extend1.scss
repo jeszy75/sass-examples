@@ -1,0 +1,8 @@
+th {
+  vertical-align: middle;
+  padding: 0.5em;
+}
+
+td {
+  @extend th;
+}

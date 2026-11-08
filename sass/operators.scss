@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+@debug 1in > 2.5cm; // true
+@debug 1in == 96px; // true
+
+@debug 4px + 1in;  // 100px
+@debug 1in + 24px; // 1.25in
+@debug 2px * 3px; // calc(6px * 1px)
+@debug 15px % 4; // 3px
+@debug math.div(15px, 3); // 5px
+@debug math.div(15px, 3px); // 5
+@debug math.div(180deg, 6s); // calc(30deg / 1s)
+
+@debug math.compatible(1in, 1deg); // false
+@debug 1in == 1deg; // false
+@debug 1in != 1deg; // true
+//@debug 1in < 1deg; // Error
+//@debug 1in + 1deg; // Error
+
+@debug not true; // false
+@debug true and false; // false
+@debug true or false; // true
+
+@debug "Length: " + 1in;
+@debug "2in + 1 = #{2in + 1}";

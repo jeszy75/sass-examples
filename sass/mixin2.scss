@@ -1,0 +1,8 @@
+@mixin set-size($size) {
+  width: $size;
+  height: $size;
+}
+
+table.sudoku td {
+  @include set-size(2em);
+}

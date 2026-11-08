@@ -1,0 +1,11 @@
+$placeholder-text: "The quick brown fox jumps over the lazy dog";
+
+@function valediction($name) {
+    @return "Your friend, #{$name}.";
+}
+
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

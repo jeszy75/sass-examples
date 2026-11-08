@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$font-sizes: (
+    "xs": 0.64rem,
+    "sm": 0.8rem,
+    "md": 1rem,
+    "lg": 1.25rem,
+    "xl": 1.563rem,
+    "xxl": 1.953rem
+);
+
+@debug map.get($font-sizes, "sm"); // 0.8rem
+@debug map.get($font-sizes, "lg"); // 1.25rem
+
+@each $name, $value in $font-sizes {
+    .text-#{$name} {
+        font-size: $value;
+    }
+}

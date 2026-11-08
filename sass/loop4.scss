@@ -1,0 +1,5 @@
+@each $i in a, b, c, d, e {
+  div.group-#{$i} {
+    width: 50%;
+  }
+}

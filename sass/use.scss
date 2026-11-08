@@ -1,0 +1,13 @@
+@use "util";
+
+p.placeholder::before {
+    content: util.$placeholder-text;
+}
+
+p.letter::after {
+    content: util.valediction("DRACULA");
+}
+
+div {
+    @include util.flex-center;
+}

@@ -1,0 +1,5 @@
+$images: "/media/images";
+
+body {
+  background-image: url("#{$images}/cat.png");
+}

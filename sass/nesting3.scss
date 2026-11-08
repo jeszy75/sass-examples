@@ -1,0 +1,14 @@
+div.foo {
+  & > div.bar {
+    background-color: red;
+  }
+  & > div.baz {
+    background-color: green;
+  }
+  & > & {
+    background-color: blue;
+  }
+  &:hover {
+    font-weight: bold;
+  }
+}

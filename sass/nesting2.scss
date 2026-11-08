@@ -1,0 +1,16 @@
+table.scrabble {
+  border-collapse: collapse;
+  td, th {
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    vertical-align: middle;
+  }
+  td {
+    border: medium solid black;
+    background-color: green;
+  }
+  th {
+    font-weight: normal;
+  }
+}

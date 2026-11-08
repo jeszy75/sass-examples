@@ -1,0 +1,7 @@
+@mixin setToZero($p) {
+  #{$p}: 0;
+}
+
+span.footnote {
+  @include setToZero(font-size);
+}

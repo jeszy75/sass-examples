@@ -1,0 +1,13 @@
+table.highscore {
+  > thead > tr {
+    background-color: darkslateblue;
+  }
+  > tbody {
+    > tr:nth-child(odd) {
+      background-color: powderblue;
+    }
+    > tr:nth-child(even) {
+      background-color: aliceblue;
+    }
+  }
+}

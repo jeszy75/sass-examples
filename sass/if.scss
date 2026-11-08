@@ -1,0 +1,18 @@
+@use "sass:color";
+
+@mixin set-colors($bg) {
+  background-color: $bg;
+  @if color.channel($bg, "lightness", $space: hsl) <= 50% {
+    color: white;
+  } @else {
+    color: black;
+  }
+}
+
+td {
+  @include set-colors(lavender);
+}
+
+th {
+  @include set-colors(indigo);
+}

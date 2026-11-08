@@ -1,0 +1,34 @@
+@use "sass:math";
+@use "sass:meta";
+
+@debug meta.type_of(true); // "bool"
+@debug meta.type_of(false); // "bool"
+
+@debug meta.type_of(null); // "null"
+
+@debug meta.type_of(font-size); // "string"
+@debug meta.type_of("Helvetica"); // "string"
+
+@debug meta.type_of(0); // "number"
+@debug math.is-unitless(0); // true
+@debug math.unit(0); // ""
+
+@debug meta.type_of(1in); // "number"
+@debug math.is-unitless(1in); // false
+@debug math.unit(1in); // "in"
+
+@debug meta.type_of(50%); // "number"
+@debug math.is-unitless(50%); // false
+@debug math.unit(50%); // "%"
+
+@debug meta.type_of(#FA8072); // "color"
+
+@debug meta.type_of(meta.get-function("type_of", $module: "meta")); // "function"
+
+@debug meta.type_of(1em 2em 3em 4em); // "list"
+@debug meta.type_of((1em, 2em, 3em, 4em)); // "list"
+@debug meta.type_of([1em 2em 3em 4em]); // "list"
+@debug meta.type_of([1em, 2em, 3em, 4em]); // "list"
+@debug meta.type_of(()); // "list"
+
+@debug meta.type_of((small: 320px, medium: 640px, large: 1024px)); // "map"

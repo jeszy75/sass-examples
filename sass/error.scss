@@ -1,0 +1,17 @@
+@use "sass:meta";
+
+@mixin value-check($value, $type) {
+  @if meta.type_of($value) != $type {
+    @error "Invalid argument: expected a #{$type}, got a #{meta.type_of($value)}"
+  }
+}
+
+@mixin setToZero($p) {
+  @include value-check($p, string);
+  #{$p}: 0;
+}
+
+span.footnote {
+  @include setToZero(font-size);
+//  @include setToZero(1in); // Error
+}

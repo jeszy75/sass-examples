@@ -1,0 +1,15 @@
+@mixin borderWithDropShadow {
+  border: thin solid black;
+  border-radius: 0.25em;
+  box-shadow: 0.25em 0.25em 0.25em gray;
+}
+
+header {
+  @include borderWithDropShadow;
+  background-color: beige;
+}
+
+nav {
+  @include borderWithDropShadow;
+  background-color: lavender;
+}
